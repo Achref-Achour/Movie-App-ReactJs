@@ -4,6 +4,7 @@ import Card from './Card.js';
 import Rating from './rating.js';
 import Search from './Search.js';
 import NewFilm from './NewFilm.js';
+import LoadingHOC from './HOC.js'
 
 // const Movie = [
 //     {
@@ -22,6 +23,8 @@ import NewFilm from './NewFilm.js';
 //         rating:'3',    
 //     }
 // ]
+
+
 class CardContainer extends React.Component {
     constructor(props) {
       super(props)
@@ -85,10 +88,10 @@ class CardContainer extends React.Component {
                      
               </div>
           </div>
-
+                                {console.log(this.state.listOfMovies.length)}
       </div>
     );
   }
 }
 
-export default CardContainer
+export default LoadingHOC(CardContainer)
